@@ -8,11 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-2EJ6JCB9N2`}
-          strategy="afterInteractive"
-        />
+      <body>
+        {children}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=G-2EJ6JCB9N2`} strategy="afterInteractive" />
         <Script id="ga4-script" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -23,8 +21,8 @@ export default function RootLayout({
             });
           `}
         </Script>
-      </head>
-      <body>{children}</body>
+      </body>
     </html>
   )
 }
+
