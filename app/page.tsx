@@ -7,7 +7,6 @@ export default function Page() {
 
   const handleClick = () => {
     setClickCount((prev) => prev + 1)
-    console.log("Button clicked!")
   }
 
   return (
