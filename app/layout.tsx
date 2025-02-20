@@ -1,5 +1,11 @@
-import Script from "next/script"
 import type React from "react"
+import "./globals.css"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Aizubrandhall LP2",
+  description: "Welcome to Aizubrandhall LP2",
+}
 
 export default function RootLayout({
   children,
@@ -8,21 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>
-        {children}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-2EJ6JCB9N2`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-script" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-2EJ6JCB9N2');
-          `}
-        </Script>
-      </body>
+      <body className="min-h-screen bg-background">{children}</body>
     </html>
   )
 }
+
