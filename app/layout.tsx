@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Aizubrandhall LP2",
-  description: "Welcome to Aizubrandhall LP2",
+  description: "Landing page for Aizubrandhall",
 }
 
 export default function RootLayout({
@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja">
-      <body className="min-h-screen bg-background">{children}</body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   )
 }
